@@ -38,7 +38,14 @@ function changeHexCodes() {
     }
 }
 
+function changeColorBoxes() {
+    for (var i =0; i < allColorBoxes.length; i++) {
+        allColorBoxes[i].style.background =  currentColorPalette[i]
+    }
+}
+
 function displayPalette() {
     getNewPalette();
     changeHexCodes();
+    changeColorBoxes();
 }
