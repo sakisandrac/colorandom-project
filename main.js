@@ -1,6 +1,6 @@
 var hexCodes = document.querySelectorAll('h2');
 var colorBoxes = document.querySelectorAll('.color-box');
-var paletteBtn = document.querySelector('.palette-button')
+var paletteBtn = document.querySelector('#new-palette-btn')
 
 var allHexCodes = Array.from(hexCodes);
 var allColorBoxes = Array.from(colorBoxes);
