@@ -1,9 +1,11 @@
 var hexCodes = document.querySelectorAll('h2');
 var colorBoxes = document.querySelectorAll('.color-box');
-var paletteBtn = document.querySelector('#new-palette-btn')
+var paletteBtn = document.querySelector('#newPaletteBtn');
+var boxContainer = document.querySelector('.box-container');
 
 window.addEventListener('load', displayPalette);
 paletteBtn.addEventListener('click', displayPalette);
+boxContainer.addEventListener('click', toggleLock);
 
 var currentColorPalette = [];
 var hexOptions = 'ABCDEF0123456789'.split('');
@@ -45,4 +47,13 @@ function displayPalette() {
     getNewPalette();
     changeHexCodes();
     changeColorBoxes();
+}
+
+function toggleLock(event) {
+    for (var i = 1; i < 6; i++) {
+        if (event.target.parentNode.id === `box${i}`) {
+            document.getElementById(`lock${i}`).classList.toggle('hidden');
+            document.getElementById(`unlock${i}`).classList.toggle('hidden');
+        }
+    }
 }
