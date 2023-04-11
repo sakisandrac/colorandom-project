@@ -2,6 +2,7 @@ var hexCodes = document.querySelectorAll('h2');
 var colorBoxes = document.querySelectorAll('.color-box');
 var paletteBtn = document.querySelector('.palette-button')
 
+var currentColorPalette = [];
 var hexOptions = 'ABCDEF0123456789'.split('');
 
 function getRandomIndex() {
@@ -16,3 +17,11 @@ function createHexCode() {
     var hexCode = hexChars.join('');
     return `#${hexCode}`;
 }
+
+function getNewPalette() {
+  newPalette = [];
+  for (var i = 0; i < 5; i++) {
+    newPalette.push(createHexCode());
+  }
+  currentColorPalette = newPalette;
+} 
