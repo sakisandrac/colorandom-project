@@ -2,9 +2,6 @@ var hexCodes = document.querySelectorAll('h2');
 var colorBoxes = document.querySelectorAll('.color-box');
 var paletteBtn = document.querySelector('#new-palette-btn')
 
-var allHexCodes = Array.from(hexCodes);
-var allColorBoxes = Array.from(colorBoxes);
-
 window.addEventListener('load', displayPalette);
 paletteBtn.addEventListener('click', displayPalette);
 
@@ -33,14 +30,14 @@ function getNewPalette() {
 } 
 
 function changeHexCodes() {
-    for(var i =0; i < allHexCodes.length; i++) {
-        allHexCodes[i].innerText = currentColorPalette[i];
+    for(var i =0; i < hexCodes.length; i++) {
+        hexCodes[i].innerText = currentColorPalette[i];
     }
 }
 
 function changeColorBoxes() {
-    for (var i =0; i < allColorBoxes.length; i++) {
-        allColorBoxes[i].style.background =  currentColorPalette[i]
+    for (var i =0; i < colorBoxes.length; i++) {
+        colorBoxes[i].style.background =  currentColorPalette[i]
     }
 }
 
