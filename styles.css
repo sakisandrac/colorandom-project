@@ -40,27 +40,27 @@ h2 {
   border: 4px solid black;
 }
 
-.one {
+#box1 {
   background-color: #ea9999;
 }
 
-.two {
+#box2 {
   background-color: #facb9c;
 }
 
-.three {
+#box3 {
   background-color: #ffe59a;
 }
 
-.four {
+#box4 {
   background-color: #b6d7a8;
 }
 
-.five {
+#box5 {
   background-color: #a4c4ca;
 }
 
-.new-palette {
+.palette-button {
     margin-top: 80px;
     background-color: black;
     color: white;
