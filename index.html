@@ -9,53 +9,72 @@
     <title>ColoRandom</title>
   </head>
   <body>
-    <header>
-      <h1>COLORANDOM</h1>
-    </header>
-    <main>
-      <div class="box-container">
-        <div class="box-container">
-          <section class="box-set">
-            <section class="color-box" id="box1">
-                <img class="unlock-box" id="unlock1" src="./icons/unlocked.png" alt="Unlocked Icon">
-                <img class="lock-box hidden" id="lock1" src="./icons/locked.png" alt="Locked Icon">
-            </section>
-            <h2>#EA9999</h2>
-          </section>
-          <section class="box-set">
-            <section class="color-box" id="box2">
-                <img class="unlock-box" id="unlock2" src="./icons/unlocked.png" alt="Unlocked Icon">
-                <img class="lock-box hidden" id="lock2" src="./icons/locked.png" alt="Locked Icon">
-            </section>
-            <h2>#FACB9C</h2>
-          </section>
-          <section class="box-set">
-            <section class="color-box" id="box3">
-                <img class="unlock-box" id="unlock3" src="./icons/unlocked.png" alt="Unlocked Icon">
-                <img class="lock-box hidden" id="lock3" src="./icons/locked.png" alt="Locked Icon">
-            </section>
-            <h2>#FFE59A</h2>
-          </section>
-          <section class="box-set">
-            <section class="color-box" id="box4">
-                <img class="unlock-box" id="unlock4" src="./icons/unlocked.png" alt="Unlocked Icon">
-                <img class="lock-box hidden" id="lock4" src="./icons/locked.png" alt="Locked Icon">
-            </section>
-            <h2>#B6D7A8</h2>
-          </section>
-          <section class="box-set">
-            <section class="color-box" id="box5">
-                <img class="unlock-box" id="unlock5" src="./icons/unlocked.png" alt="Unlocked Icon">
-                <img class="lock-box hidden" id="lock5" src="./icons/locked.png" alt="Locked Icon">
-            </section>
-            <h2>#A4C4CA</h2>
-          </section>
-        </div>
-      </div>
-      <div class="flex-buttons">
-        <button class="palette-button" id="newPaletteBtn">New Palette</button>
-      </div>
-    </main>
+    <div class="big-container">
+        <div class="main-container">
+            <header>
+                <h1>COLORANDOM</h1>
+            </header>
+            <main>
+                <div class="box-container">
+                    <div class="box-container">
+                        <section class="box-set">
+                            <section class="color-box" id="box1">
+                                <img class="unlock-box" id="unlock1" src="./icons/unlocked.png" alt="Unlocked Icon">
+                                <img class="lock-box hidden" id="lock1" src="./icons/locked.png" alt="Locked Icon">
+                            </section>
+                            <h2>#EA9999</h2>
+                        </section>
+                        <section class="box-set">
+                            <section class="color-box" id="box2">
+                                <img class="unlock-box" id="unlock2" src="./icons/unlocked.png" alt="Unlocked Icon">
+                                <img class="lock-box hidden" id="lock2" src="./icons/locked.png" alt="Locked Icon">
+                            </section>
+                            <h2>#FACB9C</h2>
+                        </section>
+                        <section class="box-set">
+                            <section class="color-box" id="box3">
+                                <img class="unlock-box" id="unlock3" src="./icons/unlocked.png" alt="Unlocked Icon">
+                                <img class="lock-box hidden" id="lock3" src="./icons/locked.png" alt="Locked Icon">
+                            </section>
+                            <h2>#FFE59A</h2>
+                        </section>
+                        <section class="box-set">
+                            <section class="color-box" id="box4">
+                                <img class="unlock-box" id="unlock4" src="./icons/unlocked.png" alt="Unlocked Icon">
+                                <img class="lock-box hidden" id="lock4" src="./icons/locked.png" alt="Locked Icon">
+                            </section>
+                            <h2>#B6D7A8</h2>
+                        </section>
+                        <section class="box-set">
+                            <section class="color-box" id="box5">
+                                <img class="unlock-box" id="unlock5" src="./icons/unlocked.png" alt="Unlocked Icon">
+                                <img class="lock-box hidden" id="lock5" src="./icons/locked.png" alt="Locked Icon">
+                            </section>
+                            <h2>#A4C4CA</h2>
+                        </section>
+                    </div>
+                </div>
+                <div class="flex-buttons">
+                    <button class="palette-button" id="newPaletteBtn">New Palette</button>
+                </div>
+                </div>
+                <div id="saved-container">
+                    <section id="saved-palettes">
+                        <h3>Saved Palettes</h3>
+                        <h4>No saved palettes yet!</h4>
+                        <section class="mini-container hidden">
+                            <section class="mini-palette"></section>
+                            <section class="mini-palette"></section>
+                            <section class="mini-palette"></section>
+                            <section class="mini-palette"></section>
+                            <section class="mini-palette"></section>
+                            <img class="delete" src="./assets/delete.png">
+                        </section>
+                    </section>
+                </div>
+               
+            </main>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
