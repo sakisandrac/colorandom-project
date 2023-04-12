@@ -80,6 +80,7 @@ function displayPalette() {
 function loadPage() {
     unlockColors();
     displayPalette();
+}
 
 function savePalettes() {
     savedPalettes.push(currentColorPalette);
