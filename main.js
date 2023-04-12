@@ -2,7 +2,9 @@ var hexCodes = document.querySelectorAll('h2');
 var colorBoxes = document.querySelectorAll('.color-box');
 var paletteBtn = document.querySelector('#newPaletteBtn');
 var boxContainer = document.querySelector('.box-container');
-var savePaletteBtn = document.querySelector('#savePaletteBtn')
+var savePaletteBtn = document.querySelector('#savePaletteBtn');
+var savedPalettesContainer = document.querySelector('#saved-palettes');
+var savedSectionMsg = document.querySelector('h4')
 var currentColorPalette = [];
 var hexOptions = 'ABCDEF0123456789'.split('');
 var savedPalettes = [];
@@ -63,5 +65,23 @@ function toggleLock(event) {
 
 function savePalettes() {
     savedPalettes.push(currentColorPalette);
-    console.log(savedPalettes)
+    displaySavedPalettes();
+}
+
+function displaySavedPalettes() {
+    savedSectionMsg.classList.add('hidden');
+    savedPalettesContainer.innerHTML = '';
+
+    for (var i=0; i < savedPalettes.length; i++){
+    savedPalettesContainer.innerHTML += `
+    <section class="mini-container">
+        <section class="mini-palette" style="background-color: ${savedPalettes[i][0]}"></section>
+        <section class="mini-palette" style="background-color: ${savedPalettes[i][1]}"></section>
+        <section class="mini-palette" style="background-color: ${savedPalettes[i][2]}"></section>
+        <section class="mini-palette" style="background-color: ${savedPalettes[i][3]}"></section>
+        <section class="mini-palette" style="background-color: ${savedPalettes[i][4]}"></section>
+        <img class="delete" src="./assets/delete.png">
+    </section>
+    `
+    }
 }
