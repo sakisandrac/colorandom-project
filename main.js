@@ -13,6 +13,7 @@ window.addEventListener('load', displayPalette);
 paletteBtn.addEventListener('click', displayPalette);
 boxContainer.addEventListener('click', toggleLock);
 savePaletteBtn.addEventListener('click', savePalettes);
+savedPalettesContainer.addEventListener('click', deletePalette);
 
 
 function getRandomIndex() {
@@ -80,8 +81,15 @@ function displaySavedPalettes() {
         <section class="mini-palette" style="background-color: ${savedPalettes[i][2]}"></section>
         <section class="mini-palette" style="background-color: ${savedPalettes[i][3]}"></section>
         <section class="mini-palette" style="background-color: ${savedPalettes[i][4]}"></section>
-        <img class="delete" src="./assets/delete.png">
+        <img class="delete" data-index-numer="${i}" src="./icons/delete.png">
     </section>
     `
+    }
+}
+
+function deletePalette(e) {
+    if (e.target.className === 'delete') {
+        savedPalettes.splice(e.target.dataset.indexNumber, 1);
+        displaySavedPalettes();
     }
 }
