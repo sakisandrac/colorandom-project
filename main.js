@@ -13,7 +13,7 @@ window.addEventListener('load', displayPalette);
 paletteBtn.addEventListener('click', displayPalette);
 boxContainer.addEventListener('click', toggleLock);
 savePaletteBtn.addEventListener('click', savePalettes);
-savedPalettesContainer.addEventListener('click', deletePalette);
+savedPalettesContainer.addEventListener('click', changeSavedDisplay);
 
 
 function getRandomIndex() {
@@ -81,7 +81,7 @@ function displaySavedPalettes() {
         <section class="mini-palette" style="background-color: ${savedPalettes[i][2]}"></section>
         <section class="mini-palette" style="background-color: ${savedPalettes[i][3]}"></section>
         <section class="mini-palette" style="background-color: ${savedPalettes[i][4]}"></section>
-        <img class="delete" data-index-numer="${i}" src="./icons/delete.png">
+        <img class="delete" data-index-number="${i}" src="./icons/delete.png">
     </section>
     `
     }
@@ -90,6 +90,17 @@ function displaySavedPalettes() {
 function deletePalette(e) {
     if (e.target.className === 'delete') {
         savedPalettes.splice(e.target.dataset.indexNumber, 1);
-        displaySavedPalettes();
     }
+}
+
+function showMessage() {
+    if (savedPalettesContainer.innerHTML === ''){
+        savedPalettesContainer.innerHTML = `<h4>No saved palettes yet!</h4>`;
+    }
+}
+
+function changeSavedDisplay(e) {
+    deletePalette(e);
+    displaySavedPalettes();
+    showMessage();
 }
