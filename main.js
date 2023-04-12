@@ -2,13 +2,16 @@ var hexCodes = document.querySelectorAll('h2');
 var colorBoxes = document.querySelectorAll('.color-box');
 var paletteBtn = document.querySelector('#newPaletteBtn');
 var boxContainer = document.querySelector('.box-container');
+var savePaletteBtn = document.querySelector('#savePaletteBtn')
+var currentColorPalette = [];
+var hexOptions = 'ABCDEF0123456789'.split('');
+var savedPalettes = [];
 
 window.addEventListener('load', displayPalette);
 paletteBtn.addEventListener('click', displayPalette);
 boxContainer.addEventListener('click', toggleLock);
+savePaletteBtn.addEventListener('click', savePalettes);
 
-var currentColorPalette = [];
-var hexOptions = 'ABCDEF0123456789'.split('');
 
 function getRandomIndex() {
     return Math.floor(Math.random() * hexOptions.length);
@@ -24,12 +27,12 @@ function createHexCode() {
 }
 
 function getNewPalette() {
-  newPalette = [];
+  var newPalette = [];
   for (var i = 0; i < 5; i++) {
     newPalette.push(createHexCode());
   }
   currentColorPalette = newPalette;
-} 
+}
 
 function changeHexCodes() {
     for(var i =0; i < hexCodes.length; i++) {
@@ -56,4 +59,9 @@ function toggleLock(event) {
             document.getElementById(`unlock${i}`).classList.toggle('hidden');
         }
     }
+}
+
+function savePalettes() {
+    savedPalettes.push(currentColorPalette);
+    console.log(savedPalettes)
 }
