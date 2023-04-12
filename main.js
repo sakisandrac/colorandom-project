@@ -69,6 +69,7 @@ function savePalettes() {
 }
 
 function displaySavedPalettes() {
+    displayPalette()
     savedSectionMsg.classList.add('hidden');
     savedPalettesContainer.innerHTML = '';
 
@@ -80,7 +81,7 @@ function displaySavedPalettes() {
         <section class="mini-palette" style="background-color: ${savedPalettes[i][2]}"></section>
         <section class="mini-palette" style="background-color: ${savedPalettes[i][3]}"></section>
         <section class="mini-palette" style="background-color: ${savedPalettes[i][4]}"></section>
-        <img class="delete" src="./assets/delete.png">
+        <img class="delete" src="./icons/delete.png">
     </section>
     `
     }
