@@ -1,3 +1,5 @@
+/* // https://www.youtube.com/watch?v=vQAvjof1oe4&ab_channel=KevinPowell */
+
 * {
   font-family: Poppins;
   margin: 0;
@@ -24,18 +26,30 @@ h2 {
 }
 
 .big-container {
-    display: flex;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.main-container {
+  /* margin: 0 100px 0; */
+  flex-grow: 1;
+  /* flex: 1 1 80%; */
+  /* width: 80% */
+}
+
+
 
 .flex-buttons {
     display: flex;
     justify-content: center;
+    gap: 90px;
 }
 
 .box-container {
   display: flex;
   justify-content: center;
-  column-gap: 15px;
+  gap: 15px;
+  margin: 0 30px;
 }
 
 .color-box {
@@ -68,14 +82,7 @@ h2 {
   background-color: #a4c4ca;
 }
 
-.unlock-box {
-    height: 20%;
-    width: 20%;
-    padding-bottom: 2%;
-    position: absolute;
-}
-
-.lock-box {
+.unlock-box, .lock-box {
     height: 20%;
     width: 20%;
     padding-bottom: 2%;
@@ -95,13 +102,16 @@ h2 {
 
 #saved-container {
     border-left: 5px solid black;
-    padding-left: 100px;
+    /* flex: 1 1 20%; */
+    /* padding-left: 100px; */
     /* max-width: 30%; */
 }
 
 h3 {
     font-weight: 600;
     font-size: 40px;
+    text-align: center;
+    margin-top: 40px;
 }
 
 #saved-palettes {
@@ -109,11 +119,12 @@ h3 {
     text-align: center;
     height: 100vh;
     width: 400px;
-    margin: auto;
+    margin: 0 75px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin-top: 30px;
+    /* width: 20% */
 }
 
 .mini-container {
