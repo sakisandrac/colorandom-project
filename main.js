@@ -17,6 +17,7 @@ paletteBtn.addEventListener('click', displayPalette);
 boxContainer.addEventListener('click', toggleLock);
 savePaletteBtn.addEventListener('click', savePalettes);
 savedPalettesContainer.addEventListener('click', changeSavedDisplay);
+savedContainer.addEventListener('click', editPalette);
 
 // Event Handlers
 function getRandomIndex() {
@@ -130,5 +131,14 @@ function changeSavedDisplay(e) {
     showMessage();
 }
 
-savedContainer.addEventListener('click', editPalette);
-
+function editPalette(event) {
+    for (var i = 0; i < currentColorPalette.length; i++) {
+        if (event.target.parentNode.id === `${i}`) {
+            for (var j = 0; j < currentColorPalette.length; j++) {
+                currentColorPalette[j].code = savedPalettes[i][j].code;
+            }
+            changeHexCodes();
+            changeColorBoxes();
+        }
+     }
+}
