@@ -46,7 +46,7 @@ function getNewPalette() {
         newPalette.push(hexCodes[i].innerText);
     }
   }
-  currentColorPalette = newPalette;
+  return newPalette;
 }
 
 function changeHexCodes() {
@@ -72,7 +72,7 @@ function toggleLock(event) {
 }
 
 function displayPalette() {
-    getNewPalette();
+    currentColorPalette = getNewPalette();
     changeHexCodes();
     changeColorBoxes();
 }
