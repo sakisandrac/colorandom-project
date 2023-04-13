@@ -45,7 +45,7 @@ function loadPalette() {
 function getNewPalette() {
   for (var i = 0; i < 5; i++) {
     if (!currentColorPalette[i].locked) {
-        currentColorPalette.splice(i,1,createHexCode());
+        currentColorPalette.splice(i, 1, createHexCode());
     }
   }
 }
