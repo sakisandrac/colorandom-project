@@ -91,10 +91,10 @@ function savePalettes() {
     }
     savedPalettes.push(newPalette);
     displaySavedPalettes();
+    displayPalette();
 }
 
 function displaySavedPalettes() {
-    displayPalette();
     savedSectionMsg.classList.add('hidden');
     savedPalettesContainer.innerHTML = '';
     for (var i = 0; i < savedPalettes.length; i++) {
