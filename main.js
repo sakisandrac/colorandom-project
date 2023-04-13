@@ -43,7 +43,7 @@ function loadPalette() {
 }
 
 function getNewPalette() {
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < currentColorPalette.length; i++) {
     if (!currentColorPalette[i].locked) {
         currentColorPalette.splice(i, 1, createHexCode());
     }
@@ -63,7 +63,7 @@ function changeColorBoxes() {
 }
 
 function toggleLock(event) {
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < currentColorPalette.length; i++) {
         if (event.target.parentNode.id === `box${i}`) {
             currentColorPalette[i].locked = !currentColorPalette[i].locked;
             document.getElementById(`lock${i}`).classList.toggle('hidden');
