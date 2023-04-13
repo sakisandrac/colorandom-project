@@ -81,9 +81,14 @@ function loadPage() {
     unlockColors();
     displayPalette();
 }
+function addSavedPalette(saved, current) {
+    var paletteCollection = saved;
+    paletteCollection.push(current);
+    return paletteCollection;
+}
 
 function savePalettes() {
-    savedPalettes.push(currentColorPalette);
+    savedPalettes = addSavedPalette(savedPalettes, currentColorPalette);
     displaySavedPalettes();
 }
 
