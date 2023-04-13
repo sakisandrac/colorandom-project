@@ -130,6 +130,5 @@ function changeSavedDisplay(e) {
     showMessage();
 }
 
-
-
+savedContainer.addEventListener('click', editPalette);
 
