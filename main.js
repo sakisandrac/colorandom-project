@@ -18,8 +18,8 @@ savePaletteBtn.addEventListener('click', savePalettes);
 savedPalettesContainer.addEventListener('click', changeSavedDisplay);
 
 // Event Handlers
-function getRandomIndex() {
-    return Math.floor(Math.random() * hexOptions.length);
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
 }
 
 function unlockColors() {
@@ -31,7 +31,7 @@ function unlockColors() {
 function createHexCode() {
     var hexChars = [];
     for (var i = 0; i < 6; i++) {
-        hexChars.push(hexOptions[getRandomIndex()]);
+        hexChars.push(hexOptions[getRandomIndex(hexOptions)]);
     }
     var hexCode = hexChars.join('');
     return `#${hexCode}`;
