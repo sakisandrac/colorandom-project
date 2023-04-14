@@ -89,6 +89,13 @@ h2 {
     position: absolute;
 }
 
+.unlock-box:hover, .lock-box:hover {
+  height: 25%;
+  width: 25%;
+  padding-bottom: 1%;
+  position: absolute;
+}
+
 .palette-button {
     margin-top: 80px;
     background-color: black;
@@ -99,6 +106,10 @@ h2 {
     border-style: none;
 }
 
+.palette-button:hover {
+  background-color: darkgray;
+  color: black;
+}
 
 #saved-container {
     border-left: 5px solid black;
@@ -143,6 +154,11 @@ h3 {
 .delete {
     height: 40px;
     padding-left: 10px;
+}
+
+.delete:hover {
+  height: 50px;
+  padding: 1%;
 }
 
 .hidden {
