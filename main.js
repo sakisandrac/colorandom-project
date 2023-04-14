@@ -25,8 +25,8 @@ main.addEventListener('mouseover', function (event) {
 });
 
 // Event Handlers
-function getRandomIndex() {
-    return Math.floor(Math.random() * hexOptions.length);
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
 }
 
 function createHexCode() {
