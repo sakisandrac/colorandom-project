@@ -113,6 +113,7 @@ h2 {
 
 #saved-container {
   border-left: 5px solid black;
+  height: 100%;
   /* flex: 1 1 20%;  */
   padding-left: 2%;
   max-width: 30%;
@@ -167,4 +168,32 @@ h3 {
 
 .hidden {
     display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1000px) {
+  #saved-container {
+    border-top: 5px solid black;
+    border-left: none;
+    /* margin-top: 2%;  */
+    max-width: 100%;
+    padding-top: 2%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.big-container {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flex-buttons {
+  margin-bottom: 100px;
+} 
+h3 {
+  margin-top: 5%;
+}
 }
