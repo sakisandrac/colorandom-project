@@ -10,7 +10,7 @@ ColoRandom is a site that generates color palettes for its users. The user is pr
 - Run `open index.html` in your terminal in order to view the [project](https://sakisandrac.github.io/colorandom-project/) in a browser. 
 
 ## Preview of App:
-![](https://user-images.githubusercontent.com/126428377/232157034-fd649afb-568a-4e92-9f6e-113e7119f518.gif)
+![](https://user-images.githubusercontent.com/126428377/232164005-55cb3c10-389d-442d-b852-47e213c71171.gif)
 ## Context:
 - Mod 1, Week 4 of Turing's [Front-End Curriculum](https://frontend.turing.edu/)
 - 18-20 hours to complete
