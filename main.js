@@ -67,9 +67,9 @@ function changeColorBoxes() {
     }
 }
 
-function toggleLock(event) {
+function toggleLock(e) {
     for (var i = 0; i < currentColorPalette.length; i++) {
-        if (event.target.parentNode.id === `box${i}`) {
+        if (e.target.parentNode.id === `box${i}`) {
             currentColorPalette[i].locked = !currentColorPalette[i].locked;
             document.getElementById(`lock${i}`).classList.toggle('hidden');
             document.getElementById(`unlock${i}`).classList.toggle('hidden');
