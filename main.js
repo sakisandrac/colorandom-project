@@ -10,6 +10,8 @@ var savedContainer = document.querySelector('#saved-container');
 var hexOptions = 'ABCDEF0123456789'.split('');
 var currentColorPalette = [];
 var savedPalettes = [];
+var title = document.querySelector('h1');
+var main = document.querySelector('.main-container');
 
 // Event Listeners
 window.addEventListener('load', loadPage);
@@ -18,6 +20,9 @@ boxContainer.addEventListener('click', toggleLock);
 savePaletteBtn.addEventListener('click', savePalettes);
 savedPalettesContainer.addEventListener('click', changeSavedDisplay);
 savedContainer.addEventListener('click', editPalette);
+main.addEventListener('mouseover', function (event) {
+    changeTitleColor(event)
+});
 
 // Event Handlers
 function getRandomIndex() {
