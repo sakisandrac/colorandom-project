@@ -172,6 +172,13 @@ h3 {
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width: 1150px) {
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   #saved-container {
     border-top: 5px solid black;
