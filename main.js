@@ -10,6 +10,8 @@ var savedContainer = document.querySelector('#saved-container');
 var hexOptions = 'ABCDEF0123456789'.split('');
 var currentColorPalette = [];
 var savedPalettes = [];
+var title = document.querySelector('h1');
+var main = document.querySelector('.main-container');
 
 // Event Listeners
 window.addEventListener('load', loadPage);
@@ -18,16 +20,19 @@ boxContainer.addEventListener('click', toggleLock);
 savePaletteBtn.addEventListener('click', savePalettes);
 savedPalettesContainer.addEventListener('click', changeSavedDisplay);
 savedContainer.addEventListener('click', editPalette);
+main.addEventListener('mouseover', function (event) {
+    changeTitleColor(event)
+});
 
 // Event Handlers
-function getRandomIndex() {
-    return Math.floor(Math.random() * hexOptions.length);
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
 }
 
 function createHexCode() {
     var hexChars = [];
     for (var i = 0; i < 6; i++) {
-        hexChars.push(hexOptions[getRandomIndex()]);
+        hexChars.push(hexOptions[getRandomIndex(hexOptions)]);
     }
     var hexCode = hexChars.join('');
     return {
@@ -147,3 +152,10 @@ function displayEditPalette(i) {
     }
 }
 
+function changeTitleColor(e) {
+    if (e.target.className === "title") {
+        title.style.color = currentColorPalette[getRandomIndex(currentColorPalette)].code
+    } else {
+        title.style.color = `#000000`;
+    }
+}
