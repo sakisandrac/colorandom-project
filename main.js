@@ -134,12 +134,11 @@ function changeSavedDisplay(e) {
     deletePalette(e);
     displaySavedPalettes();
     showMessage();
-    e.stopPropagation();
 }
 
 function editPalette(event) {
     for (var i = 0; i < savedPalettes.length; i++) {
-        if (event.target.parentNode.id === `${i}`) {
+        if (event.target.parentNode.id === `${i}` && e.target.className !== 'delete') {
             displayEditPalette(i);
             changeHexCodes();
             changeColorBoxes();
