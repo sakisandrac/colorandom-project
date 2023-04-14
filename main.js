@@ -132,13 +132,18 @@ function changeSavedDisplay(e) {
 }
 
 function editPalette(event) {
-    for (var i = 0; i < currentColorPalette.length; i++) {
+    for (var i = 0; i < savedPalettes.length; i++) {
         if (event.target.parentNode.id === `${i}`) {
-            for (var j = 0; j < currentColorPalette.length; j++) {
-                currentColorPalette[j].code = savedPalettes[i][j].code;
-            }
+            displayEditPalette(i);
             changeHexCodes();
             changeColorBoxes();
         }
      }
 }
+
+function displayEditPalette(i) {
+    for (var j = 0; j < currentColorPalette.length; j++) {
+        currentColorPalette[j].code = savedPalettes[i][j].code;
+    }
+}
+
