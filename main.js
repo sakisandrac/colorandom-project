@@ -18,14 +18,14 @@ savePaletteBtn.addEventListener('click', savePalettes);
 savedPalettesContainer.addEventListener('click', changeSavedDisplay);
 
 // Event Handlers
-function getRandomIndex(array) {
-    return Math.floor(Math.random() * array.length);
+function getRandomIndex() {
+    return Math.floor(Math.random() * hexOptions.length);
 }
 
 function createHexCode() {
     var hexChars = [];
     for (var i = 0; i < 6; i++) {
-        hexChars.push(hexOptions[getRandomIndex(hexOptions)]);
+        hexChars.push(hexOptions[getRandomIndex()]);
     }
     var hexCode = hexChars.join('');
     return {
@@ -73,7 +73,7 @@ function toggleLock(event) {
 }
 
 function displayPalette() {
-    currentColorPalette = getNewPalette();
+    getNewPalette();
     changeHexCodes();
     changeColorBoxes();
 }
@@ -82,11 +82,6 @@ function loadPage() {
     loadPalette();
     changeHexCodes();
     changeColorBoxes();
-}
-function addSavedPalette(saved, current) {
-    var paletteCollection = saved;
-    paletteCollection.push(current);
-    return paletteCollection;
 }
 
 function savePalettes() {
