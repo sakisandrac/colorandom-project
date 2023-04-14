@@ -32,7 +32,7 @@ function getRandomIndex(array) {
 function createHexCode() {
     var hexChars = [];
     for (var i = 0; i < 6; i++) {
-        hexChars.push(hexOptions[getRandomIndex()]);
+        hexChars.push(hexOptions[getRandomIndex(hexOptions)]);
     }
     var hexCode = hexChars.join('');
     return {
@@ -152,3 +152,10 @@ function displayEditPalette(i) {
     }
 }
 
+function changeTitleColor(e) {
+    if (e.target.className === "title") {
+        title.style.color = currentColorPalette[getRandomIndex(currentColorPalette)].code
+    } else {
+        title.style.color = `#000000`;
+    }
+}
