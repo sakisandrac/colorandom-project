@@ -20,9 +20,7 @@ boxContainer.addEventListener('click', toggleLock);
 savePaletteBtn.addEventListener('click', savePalettes);
 savedPalettesContainer.addEventListener('click', changeSavedDisplay);
 savedContainer.addEventListener('click', editPalette);
-main.addEventListener('mouseover', function (event) {
-    changeTitleColor(event)
-});
+main.addEventListener('mouseover', changeTitleColor);
 
 // Event Handlers
 function getRandomIndex(array) {
@@ -136,9 +134,9 @@ function changeSavedDisplay(e) {
     showMessage();
 }
 
-function editPalette(event) {
+function editPalette(e) {
     for (var i = 0; i < savedPalettes.length; i++) {
-        if (event.target.parentNode.id === `${i}` && e.target.className !== 'delete') {
+        if (e.target.parentNode.id === `${i}` && e.target.className !== 'delete') {
             displayEditPalette(i);
             changeHexCodes();
             changeColorBoxes();
