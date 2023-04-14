@@ -63,7 +63,7 @@ function changeHexCodes() {
 
 function changeColorBoxes() {
     for (var i = 0; i < colorBoxes.length; i++) {
-        colorBoxes[i].style.background =  currentColorPalette[i].code;
+        colorBoxes[i].style.background = currentColorPalette[i].code;
     }
 }
 
@@ -112,7 +112,7 @@ function displaySavedPalettes() {
             <section class="mini-palette" style="background-color: ${savedPalettes[i][4].code}"></section>
             <img class="delete" data-index-number="${i}" src="./icons/delete.png">
         </section>
-        `
+        `;
     }
 }
 
@@ -123,7 +123,7 @@ function deletePalette(e) {
 }
 
 function showMessage() {
-    if (savedPalettesContainer.innerHTML === ''){
+    if (savedPalettesContainer.innerHTML === '') {
         savedPalettesContainer.innerHTML = `<h4>No saved palettes yet!</h4>`;
     }
 }
@@ -152,7 +152,7 @@ function displayEditPalette(i) {
 
 function changeTitleColor(e) {
     if (e.target.className === "title") {
-        title.style.color = currentColorPalette[getRandomIndex(currentColorPalette)].code
+        title.style.color = currentColorPalette[getRandomIndex(currentColorPalette)].code;
     } else {
         title.style.color = `#000000`;
     }
