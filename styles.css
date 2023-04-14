@@ -27,7 +27,7 @@ h2 {
 
 .big-container {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .main-container {
@@ -126,7 +126,7 @@ h3 {
     font-weight: 600;
     font-size: 40px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 15%;
 }
 
 #saved-palettes {
@@ -157,7 +157,7 @@ h3 {
 
 .delete {
     height: 40px;
-    padding-left: 10px;
+    padding: 2%;
 }
 
 .delete:hover {
