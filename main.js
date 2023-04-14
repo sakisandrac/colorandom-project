@@ -5,7 +5,8 @@ var paletteBtn = document.querySelector('#newPaletteBtn');
 var boxContainer = document.querySelector('.box-container');
 var savePaletteBtn = document.querySelector('#savePaletteBtn');
 var savedPalettesContainer = document.querySelector('#saved-palettes');
-var savedSectionMsg = document.querySelector('h4')
+var savedSectionMsg = document.querySelector('h4');
+var savedContainer = document.querySelector('#saved-container');
 var hexOptions = 'ABCDEF0123456789'.split('');
 var currentColorPalette = [];
 var savedPalettes = [];
@@ -16,6 +17,7 @@ paletteBtn.addEventListener('click', displayPalette);
 boxContainer.addEventListener('click', toggleLock);
 savePaletteBtn.addEventListener('click', savePalettes);
 savedPalettesContainer.addEventListener('click', changeSavedDisplay);
+savedContainer.addEventListener('click', editPalette);
 
 // Event Handlers
 function getRandomIndex() {
@@ -99,7 +101,7 @@ function displaySavedPalettes() {
     savedPalettesContainer.innerHTML = '';
     for (var i = 0; i < savedPalettes.length; i++) {
         savedPalettesContainer.innerHTML += `
-        <section class="mini-container">
+        <section class="mini-container" id="${i}">
             <section class="mini-palette" style="background-color: ${savedPalettes[i][0].code}"></section>
             <section class="mini-palette" style="background-color: ${savedPalettes[i][1].code}"></section>
             <section class="mini-palette" style="background-color: ${savedPalettes[i][2].code}"></section>
@@ -128,3 +130,20 @@ function changeSavedDisplay(e) {
     displaySavedPalettes();
     showMessage();
 }
+
+function editPalette(event) {
+    for (var i = 0; i < savedPalettes.length; i++) {
+        if (event.target.parentNode.id === `${i}`) {
+            displayEditPalette(i);
+            changeHexCodes();
+            changeColorBoxes();
+        }
+     }
+}
+
+function displayEditPalette(i) {
+    for (var j = 0; j < currentColorPalette.length; j++) {
+        currentColorPalette[j].code = savedPalettes[i][j].code;
+    }
+}
+
