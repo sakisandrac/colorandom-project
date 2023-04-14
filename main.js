@@ -134,6 +134,7 @@ function changeSavedDisplay(e) {
     deletePalette(e);
     displaySavedPalettes();
     showMessage();
+    e.stopPropagation();
 }
 
 function editPalette(event) {
